@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 class Card{
     constructor(suit, value){
         this.suit= suit;
@@ -25,10 +18,8 @@ class Player{
 
 }
 
-
  var player1 = new Player("Gloria");
  var player2= new Player("Tom");
-
 
 
 
@@ -47,7 +38,6 @@ class Deck{
     }
 }
 
-
 function createCards( ){
     var suit=['hearts', 'spade','diamond','club']
     var value=[ 2,3,4,5,6,7,8,9,10,11,12,13,14]
@@ -63,13 +53,11 @@ function createCards( ){
 
 
 
-
 // var cards = createCards()
 // var deck = new Deck(cards)
 // deck.shuffle()
 // //deck.cards.forEach((c) => console.log(c.value,c.suit));
 // cards.forEach((c) => console.log(c.value,c.suit));
-
 
 
 
