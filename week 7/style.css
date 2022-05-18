@@ -1,15 +1,68 @@
 div{
     cursor: pointer;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
     text-align:center;
     letter-spacing: .2em;    
+    color: red;
 }
-p2{
+
+
+body{
     align-items: center;
     size: medium;
+    background-color: lavenderblush;
+    padding: 5px;
+    margin: 5%;
+    border: 1px;
 }
-table,th,td{
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td{
     border:1px solid;
 }
+
+#rows{
+    text-align: left;
+}
+
+img{
+    height: "100px";
+    
+}
+
+th,td {
+    padding: 8px;
+    border: 1px solid black; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+th:hover {
+    background-color: pink;
+}
+
+td:hover{
+    background-color: lightpink;
+}
+.height{
+    height:200px;
+}
+ul{
+    font-size: medium;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p {
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
