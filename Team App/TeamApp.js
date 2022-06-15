@@ -48,22 +48,25 @@ function getValue(id){
     return document.getElementById(id).value;
 }
 
+// console.log(getValue());
 
 function drawDoM(){
-    let teamDiv = document.getElementById('teams')
+    let teamDiv = document.getElementById('teams');
     clearElement(teamDiv);
-    for (team of teams){
+    for (let team of teams){
         let table = createTeamTable(team);
         let title = document.createElement('h2')
         title.innerHTML = team.name;
         title.appendChild(createDeleteTeamButton(team));
         teamDiv.appendChild(title);
         teamDiv.appendChild(table);
-        for(member of team.members){
+        for(let member of team.members){
             createMemberRow(team, table, member);
         }
     }
 } 
+
+
 
 
 function createMemberRow(team, table, member){
@@ -80,7 +83,7 @@ function createDeleteRowButton(team, member){
     let btn= document.createElement('button');
     btn.className = 'btn btn-primary';
     btn.innerHTML ='Delete'
-    btn.onClick = () =>{
+    btn.onClick = () => {
         let index = team.members.indexOf(member);
         team.members.splice(index,1);
         drawDoM();
@@ -95,25 +98,25 @@ function createDeleteTeamButton(team){
     btn.innerHTML = 'Delete Team';
     btn.onClick = () => { 
         let index = teams.indexOf(team);
-        teams.splice(index,1);
+        teams.splice(index, 1);
         drawDoM();
     };
     return btn;
 }
 
 
+
 function createNewMemberButton(team){
     let btn = document.createElement('button');
+    console.log("createNewMemberButton()");
     btn.className = 'btn btn-primary';
     btn.innerHTML= 'createNewMember';
     btn.onClick = () => {
         team.members.push(new Member(getValue(`name-input-${team.id}`), getValue(`position-input-${team.id}`)));
-        drawDoM;
+        drawDoM();
     };
     return btn;
 } 
-
-
 
 
 function createTeamTable(team){
@@ -123,7 +126,7 @@ function createTeamTable(team){
     let nameColumn = document.createElement('th');
     let positionColumn = document.createElement('th');
     nameColumn.innerHTML= 'Name';
-    positionColumn.innerHTML = 'position';
+    positionColumn.innerHTML = 'Position';
     row.appendChild(nameColumn);
     row.appendChild(positionColumn);
     let formRow = table.insertRow(1);

@@ -1,33 +1,37 @@
-let button=document.getElementById('btn');
-let content=document.getElementById('content');
 
-//add event listener
 
-button.addEventListener('click', () => {
-    if (content.innerHTML == 'Goodbye!'){
-        content.innerHTML = 'Hello!';
-    }else{
-        content.innerHTML = 'Goodbye!'
-    }
+    // document.getElementById('addNewBook').addEventListener('click', () =>{
+    //     var table =document.getElementById('table');
+    //     // var row = document.createElement('body');
+    //     // var row = table.insertRow(0);
+    //     // var cell1 = row.insertCell()
+    //     // var cell2 = row.insertCell();
+    //     // var cell3 = row.insertCell();
+    //     // var cell4 = row.insertCell();
+    //     // var cell5 = row.insertCell();
+
+    //      row = table.insertRow(2);
+    //     row.insertCell(0).innerHTML=document.getElementById("cellId");
+    //     row.insertCell(1).innerHTML=document.getElementById("cellId");
+    //     row.insertCell(2).innerHTML=document.getElementById("cellId");
+    //     row.insertCell(3).innerHTML=document.getElementById("cellId");
+    //     row.insertCell(4).innerHTML=document.getElementById("cellId");
+
+
+        
+    //     // row.innerHTML = document.getElementById('#nbr,#titleId, #authorId, #genreId, #readmoreId').value;
+    //     table.appendChild(row);
+    //     document.getElementById("cellId").value = '';
+    //    });
+
+
+
+document.getElementById('p-button').addEventListener('click', ()=>{
+    var parent = document.getElementById('p-div');
+    var newElement= document.getElementById('p-input');
+    newElement.innerHTML = document.getElementById('p-input').value;
+    document.getElementById('p-input').value = ' ';
+
 });
 
-document.getElementById('remove').addEventListener('click', () =>{
-    let idToRemove = document.getElementById('remove-id').value;
-    let elementToRemove = document.getElementById(idToRemove);
-    elementToRemove.parentNode.removeChild(elementToRemove);
-    document.getElementById('remove-id').value = '';
-} );
 
-let id=0; 
-
-
-//event listner took two parameters. Click as what will be done and the functin that will produce an action when clicked.
-
-document.getElementById('add').addEventListener('click', () => {
-    var parent = document.getElementById('paragraphs');
-    var newElement = document.createElement('p');
-    newElement.innerHTML = document.getElementById('new-text').value;
-    newElement.setAttribute('id',id++);
-    parent.append(newElement);
-    document.getElementById('new-text').value = ''
-})
