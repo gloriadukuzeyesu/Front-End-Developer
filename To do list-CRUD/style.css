@@ -1,0 +1,41 @@
+body {
+    background-color: maroon;
+}
+
+.title{
+    text-align: center;
+    margin-top: 25px;
+    color: rgb(253, 253, 0);
+}
+
+.form{
+    margin: auto;
+    max-width:80%;
+    text-align: center;
+}
+
+button [ type='submit'], [aria-lable] {
+    cursor: grab;
+}
+
+#edit-box{
+    display: none;
+    max-width:80%;
+    margin: auto;
+    margin-top:10px;
+}
+
+
+td{
+    background-color: aliceblue;
+    padding-right: 10px;
+    text-align: left;
+}
+
+.to-do{
+    background: transparent !important;
+}
+.card{
+    margin-top: 50px;
+}
+

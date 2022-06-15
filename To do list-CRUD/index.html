@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD-to-do-list</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <div class="container">
+
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">Crud</h1>
+                <h2 class="card-subtitle mb-2 text-muted"> My To Do List </h2>
+            </div>
+            <div class="card-body">
+                <div class="form">
+                    <form  action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+                        <input class=" form-control form-control"type="text" id="add-todo" placeholder="Things To-Do"><br>
+                        <button type="submit"  class=" btn btn-primary">Add</button>
+                       
+                    </form>
+                    <p> You have: </p>
+                    <p id="counter"></p>
+        
+                    <table>
+                        <tr class="to-do">
+                            <th><h3>To-Do</h3></th>
+                        </tr>
+                        <tbody id="tasks">
+                        </tbody>
+                    </table>
+                </div>
+                <div id="edit-box" role="aria-hidden">
+                    <form action="javascript:void(0);" method="POST" id="save-edit">
+                       <input type="text" id="edit-todo" >
+                       <button type="submit" class="btn btn-success">Save</button>
+                       <a onclick="CloseInput()" aria-label="close">&#10006;</a>
+                   </form>
+                 </div>
+            </div>
+    
+        </div>
+
+    </div>
+     
+    
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
