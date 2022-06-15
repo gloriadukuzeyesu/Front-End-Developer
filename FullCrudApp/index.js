@@ -160,11 +160,13 @@ class DOMManager {
     }
 }
 
+//create new house button was created in Html and this is how to render it in js (make it work from js)
 $('#create-new-house').click(() => {
     DOMManager.createHouse( $ ('#new-house-name').val());
     $ ('#new-house-name').val('');
 
 })
+
 
 
 DOMManager.getAllHouses();
