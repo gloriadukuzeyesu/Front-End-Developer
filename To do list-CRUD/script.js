@@ -37,6 +37,8 @@ var app = new function (){
 
     };
 
+  
+
     //update items
     this.Edit = function (item){
         el = document.getElementById('edit-todo');
